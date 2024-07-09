@@ -22,6 +22,7 @@ after git clone project run command:
 docker run --rm -it -v $PWD:/app composer install
 docker run --rm -it -v $PWD:/app composer require runtime/frankenphp-symfony
 docker-compose -f compose.yaml up -d
+docker exec -it symfony-demo php bin/console sass:build --no-interaction
 docker exec -it symfony-demo php bin/console doctrine:migrations:migrate --no-interaction
 ```
 
