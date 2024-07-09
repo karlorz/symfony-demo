@@ -16,6 +16,15 @@ Requirements
 Installation
 ------------
 
+**Option docker.** 
+after git clone project run command:
+```bash
+docker run --rm -it -v $PWD:/app composer install
+docker run --rm -it -v $PWD:/app composer require runtime/frankenphp-symfony
+docker-compose -f compose.yaml up -d
+docker exec -it symfony-demo php bin/console doctrine:migrations:migrate --no-interaction
+```
+
 There are 3 different ways of installing this project depending on your needs:
 
 **Option 1.** [Download Symfony CLI][4] and use the `symfony` binary installed
